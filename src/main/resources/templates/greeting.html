@@ -5,7 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="${info.name}" />
-    <p th:text="${info.description}" />
+    <p th:text="${infoCams[4].name}" />
+    <a th:href="${infoCams[4].url}" target="_blank">Link to WebCam</a>
+    <p th:text="${infoWeather.name}" />
+    <p th:text="${infoWeather.cod}" />
 </body>
 </html>

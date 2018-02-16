@@ -3,17 +3,12 @@ package app.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Beer {
+public class Weather {
 
 	private String name;
-    private String description;
     
     public String getName() {
 		return name;
-	}
-    
-    public String getDescription() {
-		return description;
 	}
 
 }
