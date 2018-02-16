@@ -5,5 +5,5 @@ build
 .classpath
 .project
 
-*/.sass-cache/
-*/node_modules/
+.sass-cache
+node_modules
