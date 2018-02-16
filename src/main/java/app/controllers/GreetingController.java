@@ -9,6 +9,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import app.services.ApiCallObject;
 import app.services.ApiCallObjects;
+import app.utils.GlobalProperties;
 
 @Controller
 public class GreetingController {
@@ -17,15 +18,15 @@ public class GreetingController {
 	  public String weather(Model model) {
 		  
 		  UriComponents urlCams = UriComponentsBuilder.newInstance()
-			      .scheme("http").host("api.oceandrivers.com").path("/v1.0/getWebCams")
-			      .query("appid=68e66ece6cffc81f9c4eff0785619286").query("q=london").build();
+			      .scheme("http").host(GlobalProperties.getCamsHost()).path(GlobalProperties.getCamsPath()).build();
 		  
 		  ApiCallObjects x = new ApiCallObjects(urlCams.toString());
 		  model.addAttribute("infoCams", x.getResult());
 		  
 		  UriComponents urlWeather = UriComponentsBuilder.newInstance()
-			      .scheme("https").host("api.openweathermap.org").path("/data/2.5/weather")
-			      .query("appid=68e66ece6cffc81f9c4eff0785619286").query("q=london").build();
+			      .scheme("https").host(GlobalProperties.getWeatherHost()).path(GlobalProperties.getWeatherPath())
+			      .queryParam("appid", "68e66ece6cffc81f9c4eff0785619286").queryParam("q", "london")
+			      .build();
 		  
 		  ApiCallObject y = new ApiCallObject(urlWeather.toString());
 	      model.addAttribute("infoWeather", y.getResult());
