@@ -24,8 +24,9 @@ public class GreetingController {
 		  model.addAttribute("infoCams", x.getResult());
 		  
 		  UriComponents urlWeather = UriComponentsBuilder.newInstance()
-			      .scheme("https").host(GlobalProperties.getWeatherHost()).path(GlobalProperties.getWeatherPath())
-			      .queryParam("appid", "68e66ece6cffc81f9c4eff0785619286").queryParam("q", "london")
+			      .scheme(GlobalProperties.getScheme()).host(GlobalProperties.getWeatherHost())
+			      .path(GlobalProperties.getWeatherPath()).queryParam("appid", "68e66ece6cffc81f9c4eff0785619286")
+			      .queryParam("q", "london")
 			      .build();
 		  
 		  ApiCallObject y = new ApiCallObject(urlWeather.toString());
@@ -33,5 +34,4 @@ public class GreetingController {
 	      
 	      return "greeting";
 	  }
-	  
 }

@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("api")
 public class GlobalProperties {
 
-    private static String camsHost, camsPath;
+	private static String scheme;
+	
+	private static String camsHost, camsPath;
     
     private static String weatherHost, weatherPath;
 
@@ -44,6 +46,14 @@ public class GlobalProperties {
 
 	public static void setWeatherPath(String weatherPath) {
 		GlobalProperties.weatherPath = weatherPath;
+	}
+
+	public static String getScheme() {
+		return scheme;
+	}
+
+	public static void setScheme(String scheme) {
+		GlobalProperties.scheme = scheme;
 	}
 
 }
