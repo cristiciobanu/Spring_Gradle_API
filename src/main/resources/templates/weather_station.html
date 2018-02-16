@@ -13,6 +13,10 @@
     <p th:text="${infoWeather.cod}" />
     <p th:text="${infoWeather.visibility}" />
     <p th:text="${infoWeather.main}" />
+		
+		<form action="/greeting" method="GET">
+				<input type="text" id="city" name="city" placeholder="Insert a city name..." />
+			</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/module1.js" charset="utf-8"></script>

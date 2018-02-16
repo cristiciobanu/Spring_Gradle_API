@@ -14,7 +14,7 @@ public class GlobalProperties {
 	
 	private static String camsHost, camsPath;
     
-    private static String weatherHost, weatherPath;
+    private static String weatherHost, weatherPath, weatherId;
 
 	public static String getCamsHost() {
 		return camsHost;
@@ -54,6 +54,14 @@ public class GlobalProperties {
 
 	public static void setScheme(String scheme) {
 		GlobalProperties.scheme = scheme;
+	}
+
+	public static String getWeatherId() {
+		return weatherId;
+	}
+
+	public static void setWeatherId(String weatherId) {
+		GlobalProperties.weatherId = weatherId;
 	}
 
 }

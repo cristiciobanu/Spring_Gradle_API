@@ -33,3 +33,11 @@ dependencies {
 bootRun {
 	addResources = true
 }
+
+sourceSets {
+    main {
+        resources {
+            exclude '**/node_modules/*'
+        }
+    }
+}
