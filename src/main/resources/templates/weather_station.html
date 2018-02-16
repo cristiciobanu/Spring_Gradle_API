@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>DFG</title> 
+    <title>Stazione Meteo</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <p th:text="${infoCams[5].name}" />
@@ -12,4 +14,8 @@
     <p th:text="${infoWeather.visibility}" />
     <p th:text="${infoWeather.main}" />
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/module1.js" charset="utf-8"></script>
+<script src="js/module2.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
 </html>

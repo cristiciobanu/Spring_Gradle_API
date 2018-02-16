@@ -12,9 +12,9 @@ import app.services.ApiCallObjects;
 import app.utils.GlobalProperties;
 
 @Controller
-public class GreetingController {
+public class Weather_StationController {
 	
-	  @RequestMapping("/greeting")
+	  @RequestMapping("/weather_station")
 	  public String weather(Model model) {
 		  
 		  UriComponents urlCams = UriComponentsBuilder.newInstance()
@@ -32,6 +32,6 @@ public class GreetingController {
 		  ApiCallObject y = new ApiCallObject(urlWeather.toString());
 	      model.addAttribute("infoWeather", y.getResult());
 	      
-	      return "greeting";
+	      return "weather_station";
 	  }
 }
